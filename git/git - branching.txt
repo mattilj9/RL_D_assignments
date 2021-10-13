@@ -1,0 +1,168 @@
+Basic Branching and Merging: (example at page 89)
+
+Creating a New Branch (p. 84)
+
+To create a new pointer to the same commit you’re currently on:
+
+- git branch testing
+
+Shows you where the branch pointers are pointing (HEAD location):
+
+- git log --oneline --decorate
+- git log --oneline --decorate --graph --all
+ 
+This option is called --decorate. It will also print out the history of 
+your commits.
+
+
+Switching Branches (p. 85)
+
+To move HEAD to point to the testing branch:
+
+- git checkout testing
+
+To add all changes to stage and commit them to the current/active branch:
+
+- git commit -a -m 'made a change'
+
+To switch back to the master branch:
+
+- git checkout master
+
+It also moved the HEAD pointer back to point to the master branch. 
+
+
+Basic Branching (p. 89)
+
+To create a branch and switch to it at the same time, you can run the git 
+checkout command with the -b switch:
+
+- git checkout -b iss53
+
+This is shorthand for:
+
+- git branch iss53
+- git checkout iss53
+
+Note that if your working directory or staging area has uncommitted changes that
+conflict with the branch you’re checking out, Git won’t let you switch branches. 
+
+It’s best to have a clean working state when you switch branches.
+(Tarkista myöhemmin -> “Stashing and Cleaning”)
+
+
+Basic Merging (p. 94)
+
+To merge hotfix back into your master branch to deploy to production:
+
+- git checkout master
+- git merge hotfix
+
+You can delete the hotfix branch:
+
+- git branch -d hotfix
+
+because you no longer need it as the master branch points at the same place.
+
+
+
+Basic Merge Conflicts (p. 96)
+
+To see which files are unmerged at any point after a merge conflict:
+
+- git status
+
+
+Branch Management (p. 99)
+
+To get a simple listing of your current branches:
+
+- git branch
+
+To see the last commit on each branch:
+
+- git branch -v
+
+To see which branches are already merged into the branch you’re on:
+
+- git branch --merged
+
+Branches on this list without the * in front of them are generally 
+fine to delete with git branch -d;
+
+To see all the branches that contain work you haven’t yet merged in:
+
+- git branch --no-merged
+
+Because it contains work that isn’t merged in yet, trying to delete 
+it with git branch -d will fail.
+
+You can force delete with -D: 
+
+- git branch -D testing
+
+If you really do want to delete the branch and lose that work.
+
+
+Remote Branches (p. 103)
+
+To get a full list of remote references:
+
+- git ls-remote [remote], or git remote show [remote]
+
+
+To synchronize your work within net with other co-workers:
+
+- git fetch origin
+
+To add as a new remote reference to the project you’re currently working on:
+
+- git remote add teamone git://git.team1.ourcompany.com
+
+To fetch everything the remote teamone server has that you don’t have yet:
+
+- git fetch teamone
+
+
+Pushing: (p. 109)
+
+To push it up if you have a branch named serverfix that you want to work on with others:
+
+- git push origin serverfix
+
+To merge this work into your current working branch, you can run git merge origin/serverfix:
+
+- git checkout -b serverfix origin/serverfix
+
+
+Tracking Branches (p. 111)
+
+Branch serverfix set up to track remote branch serverfix from origin.
+Switched to a new branch 'serverfix'.
+
+- git checkout --track origin/serverfix
+
+If the branch name you’re trying to checkout (a) doesn’t exist and 
+(b) exactly matches a name on only one remote, Git will create 
+a tracking branch for you.
+
+- git checkout serverfix
+
+Branch sf set up to track remote branch serverfix from origin.
+Switched to a new branch 'sf'.
+
+- git checkout -b sf origin/serverfix
+
+Branch serverfix set up to track remote branch serverfix from origin.
+
+- git branch -u origin/serverfix
+
+
+To see what tracking branches you have set up:
+
+- git branch -vv
+
+To fetch from all your remotes right before running this:
+
+- git fetch --all; git branch -vv
+

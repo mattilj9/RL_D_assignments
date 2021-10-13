@@ -1,0 +1,125 @@
+You can get a Git project using two main approaches. 
+1) The first takes an existing project or directory and imports it into Git. 
+2) The second clones an existing Git repository from another server.
+
+Initializing a Repository in an Existing Directory (p. 43)
+
+- git init
+
+To start version-controlling existing files in the project’s directory:
+
+- git add *.c
+- git add LICENSE
+- git commit -m 'initial project version'
+
+
+Cloning an Existing Repository (p. 44)
+
+To clone a repository:
+
+- git clone https://github.com/libgit2/libgit2
+
+To clone a repository, but the target directory is called mylibgit:
+
+- git clone https://github.com/libgit2/libgit2 mylibgit
+
+
+Checking the Status of Your Files (p. 46)
+
+Shows tracked/modified files:
+
+- git status
+
+It also tells you which branch you’re on and informs you that it has not diverged 
+from the same branch on the server.
+
+
+Tracking New Files (p. 47)
+
+To begin tracking the README file:
+
+- git add README
+
+It may be helpful to think of it more as “add this content to the next commit” 
+- rather than “add this file to the project”.
+
+
+Short Status (p. 49)
+
+To get a far more simplified output:
+
+- git status -s
+
+
+Ignoring Files (p. 50)
+
+To define a file listing patterns for file ignorance name them in .gitignore:
+
+- cat .gitignore
+
+
+Viewing Your Staged and Unstaged Changes (p. 51)
+
+To see what you’ve changed but not yet staged:
+
+- git diff  (to complement "git status")
+
+It’s important to note that git diff by itself doesn’t show all changes made 
+since your last commit – only changes that are still unstaged.
+
+
+Committing Your Changes (p. 54)
+
+To commit your changes (that also launches your editor of choice for comments):
+
+- git commit
+
+Alternatively, type your commit message inline with the commit command by 
+specifying it after a -m flag: 
+
+- git commit -m "Story 182: Fix benchmarks for speed"
+ 
+Note output of commit: 
+ -> which branch you committed to (master)
+ -> what SHA-1 checksum the commit has (463dc4f)
+
+
+Skipping the Staging Area (p. 55)
+
+Adding the -a option to the git commit command makes Git automatically stage every file 
+that is already tracked before doing the commit, letting you skip the git add part:
+
+- git commit -a -m 'added new benchmarks'
+
+But be careful; sometimes this flag will cause you to include unwanted changes.
+
+
+Removing Files (p. 56)
+
+To remove a file from Git:
+
+- rm PROJECTS.md
+- git status
+- git rm PROJECTS.md
+- git status
+
+To keep the file in your working tree but remove it from your staging area:
+
+- git rm --cached README
+
+E.g. if you forgot to add something to your .gitignore file and accidentally staged it.
+
+
+Moving Files (p. 58)
+
+- git mv README.md README
+
+Equivalent to:
+
+- mv README.md README
+- git rm README.md
+- git add README
+
+More importantly, you can use any tool you like to rename a file, and address the add/rm
+later, before you commit.
+
