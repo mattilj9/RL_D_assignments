@@ -1,0 +1,15 @@
+def get_reward(self, prev_state, action, next_state):
+        # Cartesian position of the end-effector
+        cartesian_pos = self.get_cartesian_pos(next_state)
+
+        # Distance between the position of the end-effector and the goal point [1.0,1.0]
+        terminal_distance = np.sqrt(np.sum((cartesian_pos - self.goal)**2))
+
+        is_terminal = terminal_distance < self.termination_threshold
+
+        # Reward is 0 if the goal is achieved - otherwise -1
+        reward = -1
+        if is_terminal:
+            reward = 0
+
+        return reward

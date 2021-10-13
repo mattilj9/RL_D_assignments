@@ -1,0 +1,22 @@
+def value_iteration_task1(self, value_est, policy, niters=100, gamma=0.9):
+    for _ in np.arange(niters):
+        for x in np.arange(self.w):
+            for y in np.arange(self.h):
+                action_values = np.zeros(self.NO_ACTIONS)
+                for a in np.arange(self.NO_ACTIONS):
+                    state_trans_list = self.transitions[x, y, a]
+                    next_value = 0.0
+                    for trans in state_trans_list:
+                        state, reward, done, prob = trans
+                        if state: # if not Null
+                            # value iteration: equation (4.10) in Section 4.4 of [1]
+                            next_value = next_value + prob * (reward + gamma * value_est[state[0], state[1]])
+
+                    action_values[a] = next_value
+
+                max_action = np.argmax(action_values)
+
+                value_est[x, y] = action_values[max_action]
+                policy[x, y] = max_action
+
+    return value_est, policy

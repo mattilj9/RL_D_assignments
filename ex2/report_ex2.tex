@@ -1,0 +1,167 @@
+\documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[many]{tcolorbox}
+\tcbuselibrary{listings}
+\usepackage{listings}
+
+\definecolor{lg}{HTML}{f0f0f0}
+
+\newtcblisting{pycode}{
+    colback=lg,
+    boxrule=0pt,
+    arc=0pt,
+    outer arc=0pt,
+    top=0pt,
+    bottom=0pt,
+    colframe=white,
+    listing only,
+    left=15.5pt,
+    enhanced,
+    listing options={
+        basicstyle=\small\ttfamily,
+        keywordstyle=\color{blue},
+        language=Python,
+        showstringspaces=false,
+        tabsize=2,
+        numbers=left,
+        breaklines=true
+    },
+    overlay={
+        \fill[gray!30]
+        ([xshift=-3pt]frame.south west)
+        rectangle
+        ([xshift=11.5pt]frame.north west);
+    }
+}
+
+\lstset{
+    language=Python,
+    basicstyle=\small\ttfamily,
+}
+
+ 
+\begin{document}
+ 
+\title{Exercise 2}
+\author{Jari Mattila - 35260T\\
+ELEC-E8125 - Reinforcement Learning}
+
+\maketitle
+\section*{Question 1}
+What is the agent and the environment in this setup?
+\newline
+
+The environment is described in this setup as a stochastic process with a probability density that is implemented in practice using state transitions and the associated probabilities and rewards (obtained via env.transitions). The agent is the learner and decision maker who uses information from the environment (i.e. env.transitions) to make a decision about the next action.
+
+\section*{Task 1}
+
+Value iteration is implemented as a function in sailing.py. The embedded code snippet is shown below.
+\newline
+
+\noindent
+Source files: main\_Task2.py, sailing.py (function: value\_iteration\_task1(..)), values\_Task1.npy
+
+\section*{Question 2}
+
+What is the state value of the harbour and rock states? Why?
+\newline
+
+The state value of the harbour and rock states is 0.0. When the sailor hits the harbour or rocks, the episode ends. Thus, no transitions from the harbour or rock to the next states are defined (i.e., the probabilities of the next states are all zeros), so that the initial state values (=0) persist across all iterations.
+
+\section*{Task 2}
+
+\noindent
+Source files: main\_Task2.py, sailing.py (function: value\_iteration\_task1(..)), policy\_Task2.npy 
+
+\begin{pycode}
+def value_iteration_task1(self, value_est, policy, niters=100, gamma=0.9):
+    for _ in np.arange(niters):
+        for x in np.arange(self.w):
+            for y in np.arange(self.h):
+                action_values = np.zeros(self.NO_ACTIONS)
+                for a in np.arange(self.NO_ACTIONS):
+                    state_trans_list = self.transitions[x, y, a]
+                    next_value = 0.0
+                    for trans in state_trans_list:
+                        state, reward, done, prob = trans
+                        if state: # if not Null
+                            # value iteration: equation (4.10) in Section 4.4 of [1]
+                            next_value = next_value + prob * (reward + gamma * value_est[state[0], state[1]])
+
+                    action_values[a] = next_value                                                
+
+                max_action = np.argmax(action_values)
+                
+                value_est[x, y] = action_values[max_action]
+                policy[x, y] = max_action
+
+    return value_est, policy
+\end{pycode}
+
+\section*{Question 3}
+
+Which path did the sailor choose, the safe path below the rocks, or the dangerous
+path between the rocks? If you change the reward for hitting the rocks to -10 (that is, make the sailor value life more), does he still choose the same path?
+\newline
+
+The sailor chose the more dangerous path between the rocks - and some of the attempts failed badly. If you change the reward for hitting the rocks to -10, the safe path is chosen below the rocks and without crashes.
+\pagebreak
+
+\section*{Question 4}
+What happens if you run the algorithm for a smaller amount of iterations?
+Do the value function and policy still converge? Which of them - the policy or value function - needs less iterations to converge, if any? Justify your answer.
+\newline
+
+The value function requires approximately 30 iterations for convergence and policy around 24 iterations, assuming $\epsilon = 10e^{-4}$. If the number of iterations is smaller than these numbers, convergence is not guaranteed.
+\newline
+
+The policy requires fewer iterations to converge. The policy function does not need the exact and final state values: the correct relative of state values of neighbors is enough to have the correct optimal policy (see [Slack]).
+
+\section*{Task 3}
+
+\noindent
+Source files: main\_Task3.py, sailing.py (function: value\_iteration\_task3(..)), values\_Task3.npy, policy\_Task3.npy
+
+\section*{Task 4}
+
+The average is $\approx -0.15$ and standard deviation $\approx 0.26$ over $N = 1000$ episodes for the discounted return. 
+\newline
+
+This is a fairly expected result because the random walks have almost always led to rocks (with reward of -2) which explains the negative average value.
+\newline
+
+\noindent
+Source files: main\_Task4.py
+
+\section*{Question 5}
+
+What is the relationship between the discounted return and the value function?  
+Explain briefly.
+\newline
+
+They basically represent the same thing. By definition the value function is the expected value of the discounted reward, i.e. $V(s) = E[G_t|s_t=s]$ where $G_t=\sum_{k=0}^{\infty} \gamma^k r_{t+k+1}$.
+\newline
+
+In Task 4 if you change the random walks to the optimal policy of Tasks 1-3, the average is around  0.55 and the standard deviation 1.0 because the optimal policy most often ended with a reward of 10 in terminal state (= harbour).   
+
+\pagebreak
+
+
+\section*{Question 6}
+
+Imagine a reinforcement learning problem involving a robot exploring an unknown environment. 
+Could the value iteration approach used in this exercise be applied directly to that problem? 
+Why/why not? Which assumptions are unrealistic, if any?
+\newline
+
+The value iteration is used within the Markov decision process (MDP) with the known dynamics (=transition probabilities between states/actions) and reward function, i.e. the environment is known. The robot that explores an unknown environment does not know the Markovian dynamics and the reward function is also unknown therefore the robot has to learn them through exploration. 
+
+
+\bibliographystyle{ieeetr}
+\bibliography{template}  % Modify template with your bibliography name
+\end{document}
