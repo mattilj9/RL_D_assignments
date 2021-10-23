@@ -1,0 +1,21 @@
+for episode_number in range(train_episodes):
+    reward_sum, timesteps = 0, 0
+    done = False
+    # Reset the environment and observe the initial state
+    observation = env.reset()
+
+    # Loop until the episode is over
+    while not done:
+        # Get action from the agent
+        action, action_probabilities = agent.get_action(observation)
+        previous_observation = observation
+
+        # Perform the action on the environment, get new state and reward
+        observation, reward, done, info = env.step(action)
+
+        # Store action's outcome (so that the agent can improve its policy)
+        agent.store_outcome(previous_observation, action_probabilities, action, reward)
+
+        # Draw the frame, if desired
+        if render:
+            env.render()

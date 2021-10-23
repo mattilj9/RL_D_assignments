@@ -57,8 +57,8 @@ ELEC-E8125 - Reinforcement Learning}
 
 \section*{Task 1}
 
-The training performance plots are presented below for Task 1a using 
-handcrafted feature vector $\phi(s) = [s,|s|]^T$ in Figure~\ref*{fig:fig1} and Task 1b 
+The training performance plots for Task 1a and 1b are presented below using 
+handcrafted feature vector $\phi(s) = [s,|s|]^T$ in Figure~\ref*{fig:fig1} and 
 using radial basis function representations in Figure~\ref*{fig:fig2}.
 \newline
 
@@ -72,31 +72,35 @@ using radial basis function representations in Figure~\ref*{fig:fig2}.
 \begin{figure}[h] 
 	\centering  % Remember to centre the figure
     \includegraphics[width=0.9\columnwidth]{img/Figure_2_task_1b_cumulative_reward.png}
-	\caption{Training performance using radial basis function representations.}
+	\caption{Training performance using the GLIE formula for $\epsilon$.}
 	\label{fig:fig2}
 \end{figure}
 
-\noindent
-Source files: main\_task1.py, rbf\_agent\_task1a.py, rbf\_agent\_task1b.py 
+\pagebreak
 
+
+%\begin{itemize}
+\begin{enumerate}[label=(\alph*)]
+    \item handcrafted feature vector $\phi(s) = [s,|s|]^T$
+
+Training plots of all methods (Task 1 a), b), Task 2 and Task 4).    
+    
+    \item radial basis function representations (use the featurizer inside the Agent class).
+
+Training plots of all methods (Task 1 a), b), Task 2 and Task 4).
+    
+\end{enumerate}
+%\end{itemize}
+
+
+\noindent
+Source files: qlearning.py, xx.py 
 
 \section*{Question 1}
 
 Would it be possible to learn accurately Q-values for the Cartpole
 problem using linear features (by passing the state directly to a linear regressor)? Why/why
 not?
-\newline
-
-Learning Q-values for the Cartpole problem accurately using linear features can be difficult because the linear model cannot model dependencies between the features.
-\newline
-
-For example, in the Cartpole problem the high angular velocity can be either good or bad depending on the angle - this cannot be taken into account by the linear model (for details see Section 9.5 of Sutton's book).
-\newline
-
-and use~\cite{sutton2018reinforcement}.
-
-\pagebreak
-
 
 \section*{Task 2}
 
@@ -109,7 +113,7 @@ Training plots of all methods (Task 1 a), b), Task 2 and Task 4).
 \newline
 
 \noindent
-Source files: main\_task1.py, rbf\_agent\_task1a.py, rbf\_agent\_task1b.py 
+Source files: qlearning.py, xx.py 
 
 \section*{Question 2}
 
@@ -170,7 +174,42 @@ a continuous action space? If any, what could be done to solve them?
 
 \pagebreak
 
+\section*{Final}
 
+To embed code snippets in the report, you can use the \texttt{pycode} environment.
+
+\begin{pycode}
+for episode_number in range(train_episodes):
+    reward_sum, timesteps = 0, 0
+    done = False
+    # Reset the environment and observe the initial state
+    observation = env.reset()
+
+    # Loop until the episode is over
+    while not done:
+        # Get action from the agent
+        action, action_probabilities = agent.get_action(observation)
+        previous_observation = observation
+
+        # Perform the action on the environment, get new state and reward
+        observation, reward, done, info = env.step(action)
+
+        # Store action's outcome (so that the agent can improve its policy)
+        agent.store_outcome(previous_observation, action_probabilities, action, reward)
+
+        # Draw the frame, if desired
+        if render:
+            env.render()
+\end{pycode}
+
+If you add a figure, you can refer to it using Figure.~\ref*{fig:fig1}.
+
+\begin{figure}[h] 
+	\centering  % Remember to centre the figure
+    \includegraphics[width=0.9\columnwidth]{img/training.pdf}
+	\caption{This is a sample figure.}
+	\label{fig:fig1}
+\end{figure}
 
 \bibliographystyle{ieeetr}
 \bibliography{template}  % Modify template with your bibliography name

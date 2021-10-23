@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Debian) (preloaded format=xelatex 2020.10.23)  18 OCT 2021 22:14
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Debian) (preloaded format=xelatex 2020.10.23)  23 OCT 2021 14:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -797,12 +797,19 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 57.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 89--93
+Underfull \hbox (badness 10000) in paragraph at lines 60--64
 
  []
 
+File: img/Figure_1_task_1a_cumulative_reward.png Graphic file (type bmp)
+<img/Figure_1_task_1a_cumulative_reward.png>
+File: img/Figure_2_task_1b_cumulative_reward.png Graphic file (type bmp)
+<img/Figure_2_task_1b_cumulative_reward.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--96
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--89
 
  []
 
@@ -813,7 +820,31 @@ File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
 [1
 
 ]
-Overfull \hbox (14.12108pt too wide) in paragraph at lines 111--114
+Underfull \hbox (badness 10000) in paragraph at lines 90--92
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--95
+
+ []
+
+
+LaTeX Warning: Citation `sutton2018reinforcement' on page 2 undefined on input 
+line 96.
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 103--107
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--110
+
+ []
+
+
+Overfull \hbox (14.12108pt too wide) in paragraph at lines 125--128
 \TU/lmr/m/n/12 the given hand-crafted feature and more complex features like $\
 OML/cmm/m/it/12 ^^^\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 s\OT1/cmr/m/n/12 ) = [\OML
 /cmm/m/it/12 s[]; s[]; []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 s[]\OT1/cmr/m/n/12 )
@@ -822,17 +853,7 @@ OML/cmm/m/it/12 ^^^\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 s\OT1/cmr/m/n/12 ) = [\OML
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 122--125
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 126--128
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 134--139
+Underfull \hbox (badness 10000) in paragraph at lines 136--139
 
  []
 
@@ -841,34 +862,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 140--142
 
  []
 
-[2] [3]
-\openout4 = `report_ex4.listing'.
 
- (./report_ex4.listing)
-File: img/training.pdf Graphic file (type pdf)
-<use img/training.pdf>
+Underfull \hbox (badness 10000) in paragraph at lines 148--153
 
+ []
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 154--156
 
+ []
+
+[4]
 No file report_ex4.bbl.
-[4] [5]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 198.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 198.
- (./report_ex4.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 198.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 198.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 177.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 177.
+(./report_ex4.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 177.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 177.
 Package rerunfilecheck Info: File `report_ex4.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 198.
+
+
+LaTeX Warning: There were undefined references.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 177.
  ) 
 Here is how much of TeX's memory you used:
- 26552 strings out of 479712
- 511650 string characters out of 5891446
- 1025243 words of memory out of 5000000
- 43341 multiletter control sequences out of 15000+600000
- 542772 words of font info for 69 fonts, out of 8000000 for 9000
+ 26325 strings out of 479712
+ 508783 string characters out of 5891446
+ 978243 words of memory out of 5000000
+ 43123 multiletter control sequences out of 15000+600000
+ 542740 words of font info for 65 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 64i,6n,95p,953b,1588s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,6n,95p,953b,322s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on report_ex4.pdf (5 pages).
+Output written on report_ex4.pdf (4 pages).

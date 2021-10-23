@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Debian) (preloaded format=xelatex 2020.10.23)  23 OCT 2021 13:10
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Debian) (preloaded format=xelatex 2020.10.23)  23 OCT 2021 14:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**report_ex3.tex
-(./report_ex3.tex
+**template.tex
+(./template.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-07-17>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -687,46 +687,36 @@ Package shellesc Info: Restricted shell escape enabled on input line 77.
 ))
 \c@tcblisting=\count310
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
-Package: enumitem 2019/06/20 v3.9 Customized lists
-\labelindent=\skip56
-\enit@outerparindent=\dimen271
-\enit@toks=\toks43
-\enit@inbox=\box74
-\enit@count@id=\count311
-\enitdp@description=\count312
-)
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
-)
-(./report_ex3.aux)
-\openout1 = `report_ex3.aux'.
+) (./template.aux)
+\openout1 = `template.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 50.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 5
-0.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 48.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 4
+8.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -762,8 +752,8 @@ LaTeX Font Info:    ... okay on input line 50.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box75
-Package hyperref Info: Link coloring OFF on input line 50.
+\AtBeginShipoutBox=\box74
+Package hyperref Info: Link coloring OFF on input line 48.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 
@@ -773,112 +763,68 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count313
+\c@section@level=\count311
 )
-LaTeX Info: Redefining \ref on input line 50.
-LaTeX Info: Redefining \pageref on input line 50.
-LaTeX Info: Redefining \nameref on input line 50.
+LaTeX Info: Redefining \ref on input line 48.
+LaTeX Info: Redefining \pageref on input line 48.
+LaTeX Info: Redefining \nameref on input line 48.
 
-(./report_ex3.out) (./report_ex3.out)
+(./template.out) (./template.out)
 \@outlinefile=\write6
-\openout6 = `report_ex3.out'.
+\openout6 = `template.out'.
 
  ABD: EveryShipout initializing macros
-\c@lstlisting=\count314
-LaTeX Font Info:    Trying to load font information for U+msa on input line 58.
+\c@lstlisting=\count312
+LaTeX Font Info:    Trying to load font information for U+msa on input line 55.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 58.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 55.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 60--62
-
- []
-
-File: img/Figure_1_task1_1_eps-fixed_episode_reward.png Graphic file (type bmp)
-
-<img/Figure_1_task1_1_eps-fixed_episode_reward.png>
-File: img/Figure_1_task1_1_eps-GLIE_episode_reward.png Graphic file (type bmp)
-<img/Figure_1_task1_1_eps-GLIE_episode_reward.png>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 (/usr/share/texlive/texmf-dist/tex/generic/stringenc/se-ascii-print.def
 File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
 
 )
-[1
+
+LaTeX Warning: Citation `sutton2018reinforcement' on page 1 undefined on input 
+line 56.
+
+\openout4 = `template.listing'.
+
+(./template.listing)
+File: img/training.pdf Graphic file (type pdf)
+<use img/training.pdf>
+ [1
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 84--86
-
- []
-
-File: img/Figure_2_task1_2_heatmap_blues.png Graphic file (type bmp)
-<img/Figure_2_task1_2_heatmap_blues.png>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+No file template.bbl.
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 118--122
-
- []
-
-[3]
-File: img/Figure_4_task1_3a_episode_reward.png Graphic file (type bmp)
-<img/Figure_4_task1_3a_episode_reward.png>
-File: img/Figure_5_task1_3b_episode_reward.png Graphic file (type bmp)
-<img/Figure_5_task1_3b_episode_reward.png>
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 98.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 98.
+ (./template.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 98.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 98.
+Package rerunfilecheck Info: File `template.out' has not changed.
+(rerunfilecheck)             Checksum: 874C37FA22DB50CF1B6B845A760B6188;136.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: There were undefined references.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 149--151
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 157--159
-
- []
-
-[4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 167--169
-
- []
-
-File: img/Figure_7_task2_episode_reward.png Graphic file (type bmp)
-<img/Figure_7_task2_episode_reward.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 182--184
-
- []
-
-[6]
-No file report_ex3.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 194.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 194.
-(./report_ex3.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 194.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 194.
-Package rerunfilecheck Info: File `report_ex3.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 194.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 98.
  ) 
 Here is how much of TeX's memory you used:
- 26354 strings out of 479712
- 509889 string characters out of 5891446
- 977243 words of memory out of 5000000
- 43149 multiletter control sequences out of 15000+600000
- 542732 words of font info for 64 fonts, out of 8000000 for 9000
+ 26212 strings out of 479712
+ 506005 string characters out of 5891446
+ 1018636 words of memory out of 5000000
+ 43012 multiletter control sequences out of 15000+600000
+ 538127 words of font info for 51 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 64i,6n,95p,953b,453s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,6n,95p,951b,1586s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on report_ex3.pdf (6 pages).
+Output written on template.pdf (2 pages).
