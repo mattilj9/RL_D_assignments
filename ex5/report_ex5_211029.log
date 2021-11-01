@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Debian) (preloaded format=xelatex 2020.10.23)  30 OCT 2021 19:10
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Debian) (preloaded format=xelatex 2020.10.23)  30 OCT 2021 20:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**report_ex4.tex
-(./report_ex4.tex
+**report_ex5_211029.tex
+(./report_ex5_211029.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-07-17>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -699,8 +699,8 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
-(./report_ex4.aux)
-\openout1 = `report_ex4.aux'.
+No file report_ex5_211029.aux.
+\openout1 = `report_ex5_211029.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
 LaTeX Font Info:    ... okay on input line 50.
@@ -713,7 +713,7 @@ LaTeX Font Info:    ... okay on input line 50.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 50.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 5
 0.
- (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 50.
@@ -778,12 +778,14 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 50.
 LaTeX Info: Redefining \pageref on input line 50.
 LaTeX Info: Redefining \nameref on input line 50.
-
-(./report_ex4.out) (./report_ex4.out)
 \@outlinefile=\write6
-\openout6 = `report_ex4.out'.
+\openout6 = `report_ex5_211029.out'.
 
- ABD: EveryShipout initializing macros
+
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
+
+ABD: EveryShipout initializing macros
 \c@lstlisting=\count314
 LaTeX Font Info:    Trying to load font information for U+msa on input line 57.
 
@@ -797,105 +799,78 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 57.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 60--64
-
- []
-
-File: img/Figure_1_task_1a_cumulative_reward.png Graphic file (type bmp)
-<img/Figure_1_task_1a_cumulative_reward.png>
-File: img/Figure_2_task_1b_cumulative_reward.png Graphic file (type bmp)
-<img/Figure_2_task_1b_cumulative_reward.png>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 85--89
-
- []
-
 (/usr/share/texlive/texmf-dist/tex/generic/stringenc/se-ascii-print.def
 File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
 
 )
-[1
+Underfull \hbox (badness 10000) in paragraph at lines 60--65
 
-] [2]
-File: img/Figure_3_task_2a_cumulative_reward.png Graphic file (type bmp)
-<img/Figure_3_task_2a_cumulative_reward.png>
-File: img/Figure_4_task_2b_cumulative_reward.png Graphic file (type bmp)
-<img/Figure_4_task_2b_cumulative_reward.png>
+ []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--75
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--83
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--91
+
+ []
+
+
+LaTeX Warning: Reference `fig:fig1' on page 1 undefined on input line 97.
+
+File: img/training.pdf Graphic file (type pdf)
+<use img/training.pdf>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+[1
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--128
+]
+Missing character: There is no − in font cmr8!
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--127
 
  []
 
+[2]
+No file report_ex5_211029.bbl.
 [3]
-Overfull \hbox (17.38509pt too wide) in paragraph at lines 134--138
-\TU/lmr/m/n/12 the given hand-crafted feature and more complex features like $\
-OML/cmm/m/it/12 ^^^\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 s\OT1/cmr/m/n/12 ) = [\OML
-/cmm/m/it/12 s[]; s[]; []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 s[]\OT1/cmr/m/n/12 )
-\OML/cmm/m/it/12 ; []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 s[]\OT1/cmr/m/n/12 )\OML
-/cmm/m/it/12 ; s[]\OT1/cmr/m/n/12 ][]$\TU/lmr/m/n/12 . 
- []
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 186.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 186.
+ (./report_ex5_211029.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 186.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 186.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 134--138
+Package rerunfilecheck Warning: File `report_ex5_211029.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
 
- []
+Package rerunfilecheck Info: Checksums for `report_ex5_211029.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  CD7485682CF004A6171E660B1A1FB33C;88.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 144--147
-
- []
-
-[4]
-File: img/Figure_5_task_3_heatmap.png Graphic file (type bmp)
-<img/Figure_5_task_3_heatmap.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 172--175
-
- []
-
-[5]
-File: img/Figure_6_task_4a_cumulative_reward.png Graphic file (type bmp)
-<img/Figure_6_task_4a_cumulative_reward.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 184--186
-
- []
+LaTeX Warning: There were undefined references.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 193--195
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 202--205
-
- []
-
-[6] [7]
-No file report_ex4.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 215.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 215.
-(./report_ex4.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 215.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 215.
-Package rerunfilecheck Info: File `report_ex4.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 215.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 186.
  ) 
 Here is how much of TeX's memory you used:
- 26351 strings out of 479712
- 509749 string characters out of 5891446
- 977243 words of memory out of 5000000
- 43146 multiletter control sequences out of 15000+600000
- 542732 words of font info for 64 fonts, out of 8000000 for 9000
+ 26316 strings out of 479712
+ 508435 string characters out of 5891446
+ 978264 words of memory out of 5000000
+ 43122 multiletter control sequences out of 15000+600000
+ 542740 words of font info for 65 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 64i,6n,95p,953b,324s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,6n,95p,960b,324s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on report_ex4.pdf (7 pages).
+Output written on report_ex5_211029.pdf (3 pages).
