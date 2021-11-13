@@ -64,7 +64,7 @@ Source files: cartpole\_task1.py, agent.py
 
 \begin{figure}[phb] 
 	\centering  % Remember to centre the figure
-    \includegraphics[width=0.9\columnwidth]{img/Figure_1_task_1_cumulative_reward.png}
+    \includegraphics[width=0.9\columnwidth]{img/Figure_1_task_1a_cumulative_reward.png}
 	\caption{Training performance using an episodic version of actor-critic algorithm.}
 	\label{fig:fig1}
 \end{figure}
@@ -106,7 +106,7 @@ Source files: cartpole\_task2.py, agent.py
 
 \begin{figure}[phb] 
 	\centering  % Remember to centre the figure
-    \includegraphics[width=0.8\columnwidth]{img/Figure_3_task_3_cumulative_reward_ContinuousCartPole-v0.png}
+    \includegraphics[width=0.8\columnwidth]{img/Figure_3_rewards_ContinuousCartPole-v0.png}
 	\caption{Training performance using a non-episodic parallel version of actor-critic algorithm.}
 	\label{fig:fig3}
 \end{figure}
@@ -131,13 +131,15 @@ multiple\_cartpoles.py script we’ve seen in Exercises 1 and 5? Can it replace 
 the training algorithm for comparing RL algorithms? \textbf{Explain your answer.}
 \newline
 
-Several repetitions of the experiment are performed in the multiple\_cartpoles.py script, after which e.g. mean and variance can be calculated across all repetitions. 
-In the parallel\_cartpole.py script, each worker generates experiences (i.e. state, next\_state, action\_prob, reward, done) that are combined with each time step. The agent updates its policy after every $N$ (=50) steps using the combined experiences. After that all workers continue to generate experiences with the updated parameters.
+
+Actor Parallel Training
+When you use parallel computing with AC agents, each worker generates experiences from its copy of the agent and the environment. After every N steps, the worker computes gradients from the experiences and sends the computed gradients back to the client agent (the agent associated with the MATLAB® process which starts the training). The client agent updates its parameters as follows.
 \newline
 
-For example, if you want to compare the convergence properties (e.g. mean and variance) of RL algorithms, parallel data collection cannot replace multiple runs of the training algorithm.
-Parallel data collection enables faster overall data collection and may reduce correlation in the collected data that can be beneficial for neural networks. Similar benefits can be achieved by experience replay within off-policy algorithms.
+For asynchronous training, the client agent applies the received gradients without waiting for all workers to send gradients, and sends the updated parameters back to the worker that provided the gradients. Then, the worker continues to generate experiences from its environment using the updated parameters.
+\newline
 
+For synchronous training, the client agent waits to receive gradients from all of the workers and updates its parameters using these gradients. The client then sends updated parameters to all the workers at the same time. Then, all workers continue to generate experiences using the updated parameters.
 
 
 \section*{Question 4}
@@ -148,7 +150,7 @@ REINFORCE seems to completely outperform all tested A2C flavours on Cartpole, de
 a simpler algorithm. \textbf{Why is it so? Explain your answer.}
 \newline
 
-In the REINFORCE with baseline algorithm, rewards were normalized to reduce variance and support gradient calculation. This was possible because rewards were collected throughout the episode before updates were applied. This could explain the better initial performance of the REFORCE algorithm compared to the AC algorithms as, e.g., the episodic AC algorithm does not exploit rewards that could be normalized. 
+An explanation for the high variance could be because of the returns. For REINFORCE with baseline, I was able to use whitening rewards to normalize the rewards to reduce variance. That was because the algorithm samples the whole trajectory before applying updates, so I was able to apply normalization. 
 
 
 \section*{Question 5.1}
@@ -157,7 +159,8 @@ How do actor-critic methods compare to REINFORCE in terms of
 bias and variance of the policy gradient estimation? \textbf{Explain your answer.}
 \newline
 
-In the episodic version of the AC algorithm, the baseline in the REINFORCE with baseline algorithm is replaced by the state value function that provides a smooth approximation of gathered data and thus lower variance for calculating the policy gradient. Adding a baseline to REINFORCE should not cause any bias (see slide 19 of lecture 5), thus bias is more related to using an episodic or non-episodic version of the algorithm.
+The actor-critic methods may learn faster than policy gradient because
+variance of policy gradient estimate is reduced.
 
 
 \section*{Question 5.2}
@@ -165,10 +168,13 @@ In the episodic version of the AC algorithm, the baseline in the REINFORCE with 
 How could the bias-variance tradeoff in actor-critic be controlled?
 \newline
 
-The episodic Monte Carlo (REINFORCE) methods provide high variance and zero bias, and non-episodic temporal difference (esp. TD(0)) methods provide low variance with some bias (see e.g. slide 9 of lecture 3). 
-Changing the AC algorithm from the episodic version to a more non-episodic TD form, which updates the policy after every $N$ steps, provides less variance with some bias. 
-Also, eligibility traces and TD($\lambda$) can be used to vary the bias-variance tradeoff between the Monte Carlo method and TD(0) (see Lecture 3 slides).  
+Eligibility traces should be used to bring us toward Monte
+Carlo methods, but not all the way there. In the future it may be possible to more finely
+vary the trade-o↵ between TD and Monte Carlo methods by using variable , but at
+present it is not clear how this can be done reliably and usefully (Sutton page 317).
 
+Running with the same data multiple times to avoid bad initialisation.
+ 
 
 \section*{Question 6}
 
@@ -176,8 +182,21 @@ What are the advantages of policy gradient and actor-critic methods
 compared to action-value methods such as Q-learning? \textbf{Explain your answer.}
 \newline
 
-One advantage of policy gradient and actor-critic methods is that they can handle large and continuous action spaces that can only be discretized with action value methods (such as Q-learning).
-Another advantage is the handling of stochastic policies that are required in environments where the optimal policy is stochastic and, e.g., requires the use of probability distributions.
+Actor-critic approaches allow addressing continuing
+problems and continuous action spaces. 
+\newline
+
+However, they are actually different internally. The most fundamental differences between the approaches is in how they approach action selection, both whilst learning, and as the output (the learned policy). In Q-learning, the goal is to learn a single deterministic action from a discrete set of actions by finding the maximum value. With policy gradients, and other direct policy searches, the goal is to learn a map from state to action, which can be stochastic, and works in continuous action spaces.
+\newline
+
+As a result, policy gradient methods can solve problems that value-based methods cannot:
+\newline
+
+Large and continuous action space. However, with value-based methods, this can still be approximated with discretisation - and this is not a bad choice, since the mapping function in policy gradient has to be some kind of approximator in practice.
+\newline
+
+Stochastic policies. A value-based method cannot solve an environment where the optimal policy is stochastic requiring specific probabilities, such as Scissor/Paper/Stone. That is because there are no trainable parameters in Q-learning that control probabilities of action, the problem formulation in TD learning assumes that a deterministic agent can be optimal.
+\newline
 
 
 
