@@ -1,0 +1,203 @@
+\documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[many]{tcolorbox}
+\tcbuselibrary{listings}
+\usepackage{listings}
+
+\definecolor{lg}{HTML}{f0f0f0}
+
+\newtcblisting{pycode}{
+    colback=lg,
+    boxrule=0pt,
+    arc=0pt,
+    outer arc=0pt,
+    top=0pt,
+    bottom=0pt,
+    colframe=white,
+    listing only,
+    left=15.5pt,
+    enhanced,
+    listing options={
+        basicstyle=\small\ttfamily,
+        keywordstyle=\color{blue},
+        language=Python,
+        showstringspaces=false,
+        tabsize=2,
+        numbers=left,
+        breaklines=true
+    },
+    overlay={
+        \fill[gray!30]
+        ([xshift=-3pt]frame.south west)
+        rectangle
+        ([xshift=11.5pt]frame.north west);
+    }
+}
+
+\lstset{
+    language=Python,
+    basicstyle=\small\ttfamily,
+}
+
+ 
+\begin{document}
+ 
+\title{Project work}
+\author{Jari Mattila - 35260T\\
+ELEC-E8125 - Reinforcement Learning}
+
+\maketitle
+\section*{Introduction}
+
+To cite works, put them in the template.bib file and use~\cite{sutton2018reinforcement}.
+
+
+
+\section*{Describe the chosen method}
+To embed code snippets in the report, you can use the \texttt{pycode} environment.
+
+
+
+\section*{Part I}
+
+Answers to the questions in part 1.
+\newline
+
+\subsection*{Algorithm 1: Twin Delayed Deep Deterministic Policy Gradient (TD3)}
+
+
+\subsection*{Question 1}
+
+What are the problems with the deep deterministic policy gradient (DDPG) algorithm? 
+How does TD3 solve these problems? 
+
+\subsection*{Question 2}
+
+For policy gradient methods seen in Exercise 5, we update the agent using only on-policy data,
+while in TD3 we can use off-policy data. Why is this the case?
+
+\subsection*{Question 3}
+
+Finish the implementation of the TD3 algorithm and train the agent with both InvertedPendulumBulletEnvv0 and HalfCheetahBulletEnv-v0 environments.
+\newline
+
+\noindent
+Train your agents with three random seeds for both environments. 
+\newline
+
+\noindent
+Include the training plots in the project report and attach the agents’ weights to your submission, with filenames ending with td3.pth containing the run ID
+(1, 2, and 3, each with a different random seed) and the environment name.
+\newline
+
+\noindent
+If you add a figure, you can refer to it using Figure.~\ref*{fig:fig1}.
+
+\begin{figure}[h] 
+	\centering  % Remember to centre the figure
+    \includegraphics[width=0.9\columnwidth]{img/training.pdf}
+	\caption{This is a sample figure.}
+	\label{fig:fig1}
+\end{figure}
+
+\subsection*{Question 4}
+
+Now let’s analyze the sensitivity of TD3 to hyperparameters. Choose one hyperparameter, e.g.,
+target action noise, exploration noise, or policy update frequency, that you think heavily influence the training and explain why. Then, train your agent with the modified hyperparameter on both InvertedPendulumBulletEnv-v0 and HalfCheetahBulletEnv-v0 environments (3 random seeds).
+Show the training plots and submit the trained model of HalfCheetah with name "td3\_q4.pth".
+
+\subsection*{Question 5}
+
+After playing with the TD3 algorithm, could you find any aspect that could be improved? Please
+list three of them. Also, please propose a potential solution to one of the problems you listed.
+You can answer this question by providing a paper link and explaining in your own words how
+the proposed approach solves/mitigates the problem.
+
+
+\subsection*{Algorithm 2: Proximal Policy Optimization Algorithms (PPO)}
+
+\subsection*{Question 1}
+
+Why does clipping the $\dfrac{\pi_{\theta}(a|s)}{\pi_{old}(a|s)}$ ratio stabilize the training? What is the relationship between TRPO [7] and PPO?
+
+\subsection*{Question 2}
+
+Please finish the implementation of the PPO algorithm.
+\newline
+
+\noindent
+Similar to Question 3, train the agent on both the InvertedPendulumBulletEnv-v0 and the HalfCheetahBulletEnv-v0 environments.
+\newline
+
+\noindent
+Train your agents with three random seeds for both environments. 
+\newline
+
+\noindent
+Include the training plots in the project report and attach the agents’ weights to your submission, with filenames ending with ppo.pth containing the run ID (1, 2, and 3, each with a different random seed) and the environment name. 
+\newline
+
+\noindent
+For the training curve, you can reference 2. 
+
+
+
+\subsection*{Question 3}
+
+In PPO, the target value is calculated by generalized advantage estimation (GAE) [8], 
+as shown in the second equation. Explain the relationship between n-step advantage and GAE. 
+Why is GAE better than n-step advantage?
+
+\pagebreak
+
+
+
+\section*{Part 2}
+
+Answers to the questions in part 2.
+\newline
+
+\subsection*{Question 1}
+
+\noindent
+Please correctly implement your algorithm and show the training plots against the TD3/PPO
+with three random seeds. 
+\newline
+
+\noindent
+The plots should include both InvertedPendulum and HalfCheetah environments. 
+\newline
+
+\noindent
+Also, you need to describe the network structure and training procedure as well
+as hyperparemeters. A clear way to show the hyperparameters is using a table.
+
+\subsection*{Question 2}
+
+\noindent
+Let’s analysis your algorithm by performing an ablation study. You could modify one design
+option that you expect to influence the training performance. 
+\newline
+
+\noindent
+Then train the agent using the modified code and compare the results to the original algorithm. Training your agent on HalfCheetah environment is enough but with three random seeds.
+
+
+
+
+\section*{Conclusions}
+
+oekdwpodkwpod
+\noindent
+
+
+\pagebreak
+
+\bibliographystyle{ieeetr}
+\bibliography{template}  % Modify template with your bibliography name
+\end{document}
