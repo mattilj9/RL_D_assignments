@@ -2,45 +2,45 @@ This is BibTeX, Version 0.99d (TeX Live 2020/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: report_project.aux
 The style file: ieeetr.bst
-Database file #1: template.bib
-You've used 1 entry,
+Database file #1: RL.bib
+You've used 4 entries,
             1876 wiz_defined-function locations,
-            482 strings with 3598 characters,
-and the built_in function-call counts, 186 in all, are:
-= -- 15
-> -- 8
+            501 strings with 4332 characters,
+and the built_in function-call counts, 746 in all, are:
+= -- 62
+> -- 50
 < -- 0
-+ -- 3
-- -- 2
-* -- 9
-:= -- 35
-add.period$ -- 2
-call.type$ -- 1
-change.case$ -- 0
++ -- 18
+- -- 14
+* -- 61
+:= -- 136
+add.period$ -- 8
+call.type$ -- 4
+change.case$ -- 4
 chr.to.int$ -- 0
-cite$ -- 1
-duplicate$ -- 9
-empty$ -- 21
-format.name$ -- 2
-if$ -- 43
+cite$ -- 4
+duplicate$ -- 33
+empty$ -- 66
+format.name$ -- 14
+if$ -- 165
 int.to.chr$ -- 0
-int.to.str$ -- 1
-missing$ -- 2
-newline$ -- 7
-num.names$ -- 1
-pop$ -- 6
+int.to.str$ -- 4
+missing$ -- 5
+newline$ -- 19
+num.names$ -- 4
+pop$ -- 9
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 2
+skip$ -- 9
 stack$ -- 0
 substring$ -- 0
-swap$ -- 1
+swap$ -- 4
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 1
-width$ -- 2
-write$ -- 11
+while$ -- 4
+width$ -- 5
+write$ -- 43

@@ -54,7 +54,7 @@ ELEC-E8125 - Reinforcement Learning}
 \maketitle
 \section*{Introduction}
 
-To cite works, put them in the template.bib file and use~\cite{sutton2018reinforcement}.
+To cite works, put them in the template.bib file and use~\cite{sutton_reinforcement_2018}.
 
 
 
@@ -81,6 +81,8 @@ How does TD3 solve these problems?
 For policy gradient methods seen in Exercise 5, we update the agent using only on-policy data,
 while in TD3 we can use off-policy data. Why is this the case?
 
+\pagebreak
+
 \subsection*{Question 3}
 
 Finish the implementation of the TD3 algorithm and train the agent with both InvertedPendulumBulletEnvv0 and HalfCheetahBulletEnv-v0 environments.
@@ -96,14 +98,29 @@ Include the training plots in the project report and attach the agents’ weight
 \newline
 
 \noindent
-If you add a figure, you can refer to it using Figure.~\ref*{fig:fig1}.
+Training performance of TD3 algorithm in InvertedPendulumBullet environment is presented in Figure.~\ref*{fig:fig1}.
+\newline
 
-\begin{figure}[h] 
+Training performance of TD3 algorithm in HalfCheetahBullet environment is presented in Figure.~\ref*{fig:fig2}.
+\newline
+
+\pagebreak
+
+\begin{figure}[pht] 
 	\centering  % Remember to centre the figure
-    \includegraphics[width=0.9\columnwidth]{img/training.pdf}
-	\caption{This is a sample figure.}
+    \includegraphics[width=0.65\columnwidth]{img/"W&B InvertedPendulumBullet TD3".png}
+	\caption{Training performance of TD3 algorithm in InvertedPendulumBullet environment.}
 	\label{fig:fig1}
 \end{figure}
+
+\begin{figure}[phb] 
+	\centering  % Remember to centre the figure
+    \includegraphics[width=0.65\columnwidth]{img/"W&B HalfCheetahBullet TD3".png}
+	\caption{Training performance of TD3 algorithm in HalfCheetahBullet environment.}
+	\label{fig:fig2}
+\end{figure}
+
+\pagebreak
 
 \subsection*{Question 4}
 
@@ -118,6 +135,7 @@ list three of them. Also, please propose a potential solution to one of the prob
 You can answer this question by providing a paper link and explaining in your own words how
 the proposed approach solves/mitigates the problem.
 
+\pagebreak
 
 \subsection*{Algorithm 2: Proximal Policy Optimization Algorithms (PPO)}
 
@@ -146,6 +164,30 @@ Include the training plots in the project report and attach the agents’ weight
 For the training curve, you can reference 2. 
 
 
+Training performance of PPO algorithm in InvertedPendulumBullet environment is presented in Figure.~\ref*{fig:fig3}.
+\newline
+
+Training performance of PPO algorithm in HalfCheetahBullet environment is presented in Figure.~\ref*{fig:fig4}.
+\newline
+
+
+\pagebreak
+
+\begin{figure}[pht] 
+	\centering  % Remember to centre the figure
+    \includegraphics[width=0.65\columnwidth]{img/"W&B InvertedPendulumBullet PPO".png}
+	\caption{Training performance of PPO algorithm in InvertedPendulumBullet environment.}
+	\label{fig:fig3}
+\end{figure}
+
+\begin{figure}[phb] 
+	\centering  % Remember to centre the figure
+    \includegraphics[width=0.65\columnwidth]{img/"W&B HalfCheetahBullet PPO".png}
+	\caption{Training performance of PPO algorithm in HalfCheetahBullet environment.}
+	\label{fig:fig4}
+\end{figure}
+
+\pagebreak
 
 \subsection*{Question 3}
 
@@ -173,6 +215,32 @@ with three random seeds.
 The plots should include both InvertedPendulum and HalfCheetah environments. 
 \newline
 
+
+Training performance of SAC algorithm in InvertedPendulumBullet environment is presented in Figure.~\ref*{fig:fig5}.
+\newline
+
+Training performance of SAC algorithm in HalfCheetahBullet environment is presented in Figure.~\ref*{fig:fig6}.
+\newline
+
+
+\pagebreak
+
+\begin{figure}[pht] 
+	\centering  % Remember to centre the figure
+    \includegraphics[width=0.65\columnwidth]{img/WB_InvertedPendulumBullet_SAC.png}
+	\caption{Training performance of SAC algorithm in InvertedPendulumBullet environment.}
+	\label{fig:fig5}
+\end{figure}
+
+\begin{figure}[phb] 
+	\centering  % Remember to centre the figure
+    \includegraphics[width=0.65\columnwidth]{img/"W&B HalfCheetahBullet SAC".png}
+	\caption{Training performance of SAC algorithm in HalfCheetahBullet environment.}
+	\label{fig:fig6}
+\end{figure}
+
+\pagebreak
+
 \noindent
 Also, you need to describe the network structure and training procedure as well
 as hyperparemeters. A clear way to show the hyperparameters is using a table.
@@ -186,18 +254,59 @@ option that you expect to influence the training performance.
 
 \noindent
 Then train the agent using the modified code and compare the results to the original algorithm. Training your agent on HalfCheetah environment is enough but with three random seeds.
+\newline
+
+\subsection*{Hyperparameters}
+
+qwmuq9wu9q8wuz98q
+\newline
+
+Table 1. SAC Hyperparameters
+\begin{center}
+\begin{tabular}{ l|l } 
+ \hline
+ Parameter & Value \\ 
+ \hline\hline
+ optimizer & Adam(Kingma \& Ba, 2015) \\ 
+ learning rate & $3\cdot10^{-4}$ \\ 
+ discount ($\gamma$) & 0.99 \\
+ reply buffer size ($\gamma$) & $10^6$ \\
+ number of hidden layers ($\gamma$) & 2 \\
+ number of hidden units per layer ($\gamma$) & 256 \\
+ number of samples per minibatch ($\gamma$) & 256 \\
+ nonlinearity & ReLU \\
+ \hline
+\end{tabular}
+\end{center}
+
+Table 2. SAC Environment Specific Parameters
+\begin{center}
+\begin{tabular}{ l c c c } 
+ \hline
+ Environment & State Dimensions & Action Dimensions & Reward Scale \\ 
+ \hline\hline
+ InvertedPendulumBullet-v0 & 5 & 1 & 1 \\
+ HalfCheetah-v0 & 26 & 6 & 5 \\ 
+ \hline
+\end{tabular}
+\end{center}
 
 
+\nocite{*}
 
+\pagebreak
 
 \section*{Conclusions}
 
-oekdwpodkwpod
 \noindent
+oekdwpodkwpod
+
 
 
 \pagebreak
 
+
+
 \bibliographystyle{ieeetr}
-\bibliography{template}  % Modify template with your bibliography name
+\bibliography{RL}  % Modify template with your bibliography name
 \end{document}

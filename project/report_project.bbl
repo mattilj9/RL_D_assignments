@@ -1,7 +1,26 @@
 \begin{thebibliography}{1}
 
-\bibitem{sutton2018reinforcement}
-R.~S. Sutton and A.~G. Barto, {\em Reinforcement learning: An introduction}.
-\newblock MIT press, 2018.
+\bibitem{sutton_reinforcement_2018}
+R.~S. Sutton and A.~G. Barto, {\em Reinforcement learning: an introduction}.
+\newblock Adaptive computation and machine learning series, Cambridge,
+  Massachusetts: The MIT Press, second edition~ed., 2018.
+
+\bibitem{fujimoto_addressing_2018}
+S.~Fujimoto, H.~van Hoof, and D.~Meger, ``Addressing {Function} {Approximation}
+  {Error} in {Actor}-{Critic} {Methods},'' {\em arXiv:1802.09477 [cs, stat]},
+  Oct. 2018.
+\newblock arXiv: 1802.09477.
+
+\bibitem{schulman_proximal_2017}
+J.~Schulman, F.~Wolski, P.~Dhariwal, A.~Radford, and O.~Klimov, ``Proximal
+  {Policy} {Optimization} {Algorithms},'' {\em arXiv:1707.06347 [cs]}, Aug.
+  2017.
+\newblock arXiv: 1707.06347.
+
+\bibitem{haarnoja_soft_2018}
+T.~Haarnoja, A.~Zhou, P.~Abbeel, and S.~Levine, ``Soft {Actor}-{Critic}:
+  {Off}-{Policy} {Maximum} {Entropy} {Deep} {Reinforcement} {Learning} with a
+  {Stochastic} {Actor},'' {\em arXiv:1801.01290 [cs, stat]}, Aug. 2018.
+\newblock arXiv: 1801.01290.
 
 \end{thebibliography}
