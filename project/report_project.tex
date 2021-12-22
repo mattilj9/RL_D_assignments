@@ -59,9 +59,15 @@ To cite works, put them in the template.bib file and use~\cite{sutton_reinforcem
 
 
 \section*{Describe the chosen method}
+
 To embed code snippets in the report, you can use the \texttt{pycode} environment.
+\newline
 
-
+"The final algorithm is listed in Algorithm 1. The method alternates between collecting experience
+from the environment with the current policy and updating the function approximators using the
+stochastic gradients from batches sampled from a replay pool. Using off-policy data from a replay
+pool is feasible because both value estimators and the policy can be trained entirely on off-policy
+data."
 
 \section*{Part I}
 
@@ -108,14 +114,14 @@ Training performance of TD3 algorithm in HalfCheetahBullet environment is presen
 
 \begin{figure}[pht] 
 	\centering  % Remember to centre the figure
-    \includegraphics[width=0.65\columnwidth]{img/"W&B InvertedPendulumBullet TD3".png}
+    \includegraphics[width=0.65\columnwidth]{img/Figure_1_WB_InvertedPendulumBullet_TD3.png}
 	\caption{Training performance of TD3 algorithm in InvertedPendulumBullet environment.}
 	\label{fig:fig1}
 \end{figure}
 
 \begin{figure}[phb] 
 	\centering  % Remember to centre the figure
-    \includegraphics[width=0.65\columnwidth]{img/"W&B HalfCheetahBullet TD3".png}
+    \includegraphics[width=0.65\columnwidth]{img/Figure_2_WB_HalfCheetahBullet_TD3.png}
 	\caption{Training performance of TD3 algorithm in HalfCheetahBullet environment.}
 	\label{fig:fig2}
 \end{figure}
@@ -175,14 +181,14 @@ Training performance of PPO algorithm in HalfCheetahBullet environment is presen
 
 \begin{figure}[pht] 
 	\centering  % Remember to centre the figure
-    \includegraphics[width=0.65\columnwidth]{img/"W&B InvertedPendulumBullet PPO".png}
+    \includegraphics[width=0.65\columnwidth]{img/Figure_3_WB_InvertedPendulumBullet_PPO.png}
 	\caption{Training performance of PPO algorithm in InvertedPendulumBullet environment.}
 	\label{fig:fig3}
 \end{figure}
 
 \begin{figure}[phb] 
 	\centering  % Remember to centre the figure
-    \includegraphics[width=0.65\columnwidth]{img/"W&B HalfCheetahBullet PPO".png}
+    \includegraphics[width=0.65\columnwidth]{img/Figure_4_WB_HalfCheetahBullet_PPO.png}
 	\caption{Training performance of PPO algorithm in HalfCheetahBullet environment.}
 	\label{fig:fig4}
 \end{figure}
@@ -227,19 +233,52 @@ Training performance of SAC algorithm in HalfCheetahBullet environment is presen
 
 \begin{figure}[pht] 
 	\centering  % Remember to centre the figure
-    \includegraphics[width=0.65\columnwidth]{img/WB_InvertedPendulumBullet_SAC.png}
-	\caption{Training performance of SAC algorithm in InvertedPendulumBullet environment.}
+    \includegraphics[width=0.65\columnwidth]{img/Figure_5_WB_InvertedPendulumBullet_SAC.png}
+	\caption{OLD: Training performance of SAC algorithm in InvertedPendulumBullet environment.}
 	\label{fig:fig5}
 \end{figure}
 
 \begin{figure}[phb] 
 	\centering  % Remember to centre the figure
-    \includegraphics[width=0.65\columnwidth]{img/"W&B HalfCheetahBullet SAC".png}
-	\caption{Training performance of SAC algorithm in HalfCheetahBullet environment.}
+    \includegraphics[width=0.65\columnwidth]{img/Figure_6_WB_HalfCheetahBullet_SAC.png}
+	\caption{OLD: Training performance of SAC algorithm in HalfCheetahBullet environment.}
 	\label{fig:fig6}
 \end{figure}
 
 \pagebreak
+
+\begin{figure}[pht] 
+	\centering  % Remember to centre the figure
+    \includegraphics[width=0.65\columnwidth]{img/Figure_7_WB_InvertedPendulumBullet_SAC.png}
+	\caption{Training performance of SAC algorithm in InvertedPendulumBullet environment.}
+	\label{fig:fig7}
+\end{figure}
+
+\begin{figure}[phb] 
+	\centering  % Remember to centre the figure
+    \includegraphics[width=0.65\columnwidth]{img/Figure_8_WB_HalfCheetahBullet_SAC.png}
+	\caption{Training performance of SAC algorithm in HalfCheetahBullet environment.}
+	\label{fig:fig8}
+\end{figure}
+
+\pagebreak
+
+\begin{figure}[pht] 
+	\centering  % Remember to centre the figure
+    \includegraphics[width=0.65\columnwidth]{img/Figure_9_WB_InvertedPendulumBullet.png}
+	\caption{Training performance of SAC, TD3, and PPO algorithms in InvertedPendulumBullet environment.}
+	\label{fig:fig9}
+\end{figure}
+
+\begin{figure}[phb] 
+	\centering  % Remember to centre the figure
+    \includegraphics[width=0.65\columnwidth]{img/Figure_10_WB_HalfCheetahBullet.png}
+	\caption{Training performance of SAC. TD3, and PPO algorithms in HalfCheetahBullet environment.}
+	\label{fig:fig10}
+\end{figure}
+
+\pagebreak
+
 
 \noindent
 Also, you need to describe the network structure and training procedure as well
@@ -270,10 +309,10 @@ Table 1. SAC Hyperparameters
  optimizer & Adam(Kingma \& Ba, 2015) \\ 
  learning rate & $3\cdot10^{-4}$ \\ 
  discount ($\gamma$) & 0.99 \\
- reply buffer size ($\gamma$) & $10^6$ \\
- number of hidden layers ($\gamma$) & 2 \\
- number of hidden units per layer ($\gamma$) & 256 \\
- number of samples per minibatch ($\gamma$) & 256 \\
+ reply buffer size & $10^6$ \\
+ number of hidden layers & 2 \\
+ number of hidden units per layer & 256 \\
+ number of samples per minibatch & 256 \\
  nonlinearity & ReLU \\
  \hline
 \end{tabular}

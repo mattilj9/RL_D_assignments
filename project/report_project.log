@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2020.10.23)  28 NOV 2021 22:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2020.10.23)  5 DEC 2021 14:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -788,164 +788,197 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 55.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 68--70
+Underfull \hbox (badness 10000) in paragraph at lines 63--65
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--76
 
  []
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 88--90
+Underfull \hbox (badness 10000) in paragraph at lines 94--96
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--94
+Underfull \hbox (badness 10000) in paragraph at lines 97--100
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--99
+Underfull \hbox (badness 10000) in paragraph at lines 101--105
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--103
+Underfull \hbox (badness 10000) in paragraph at lines 106--109
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--106
+Underfull \hbox (badness 10000) in paragraph at lines 110--112
 
  []
 
 [2]
-<img/W&B InvertedPendulumBullet TD3.png, id=29, 2409.0pt x 1606.0pt>
-File: img/W&B InvertedPendulumBullet TD3.png Graphic file (type png)
-<use img/W&B InvertedPendulumBullet TD3.png>
-Package pdftex.def Info: img/W&B InvertedPendulumBullet TD3.png  used on input 
-line 111.
+<img/Figure_1_WB_InvertedPendulumBullet_TD3.png, id=29, 2409.0pt x 1606.0pt>
+File: img/Figure_1_WB_InvertedPendulumBullet_TD3.png Graphic file (type png)
+<use img/Figure_1_WB_InvertedPendulumBullet_TD3.png>
+Package pdftex.def Info: img/Figure_1_WB_InvertedPendulumBullet_TD3.png  used o
+n input line 117.
 (pdftex.def)             Requested size: 305.33789pt x 203.54314pt.
-<img/W&B HalfCheetahBullet TD3.png, id=31, 2409.0pt x 1606.0pt>
-File: img/W&B HalfCheetahBullet TD3.png Graphic file (type png)
-<use img/W&B HalfCheetahBullet TD3.png>
-Package pdftex.def Info: img/W&B HalfCheetahBullet TD3.png  used on input line 
-118.
+<img/Figure_2_WB_HalfCheetahBullet_TD3.png, id=31, 2409.0pt x 1606.0pt>
+File: img/Figure_2_WB_HalfCheetahBullet_TD3.png Graphic file (type png)
+<use img/Figure_2_WB_HalfCheetahBullet_TD3.png>
+Package pdftex.def Info: img/Figure_2_WB_HalfCheetahBullet_TD3.png  used on inp
+ut line 124.
 (pdftex.def)             Requested size: 305.33789pt x 203.54314pt.
- [3 <./img/W&B InvertedPendulumBullet TD3.png> <./img/W&B HalfCheetahBullet TD3
-.png>] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 148--150
+ [3 <./img/Figure_1_WB_InvertedPendulumBullet_TD3.png> <./img/Figure_2_WB_HalfC
+heetahBullet_TD3.png>] [4]
+Underfull \hbox (badness 10000) in paragraph at lines 154--156
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--154
+Underfull \hbox (badness 10000) in paragraph at lines 157--160
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--158
+Underfull \hbox (badness 10000) in paragraph at lines 161--164
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--162
+Underfull \hbox (badness 10000) in paragraph at lines 165--168
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--169
+Underfull \hbox (badness 10000) in paragraph at lines 173--175
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 170--172
+Underfull \hbox (badness 10000) in paragraph at lines 176--178
 
  []
 
 [5]
-<img/W&B InvertedPendulumBullet PPO.png, id=56, 2409.0pt x 1606.0pt>
-File: img/W&B InvertedPendulumBullet PPO.png Graphic file (type png)
-<use img/W&B InvertedPendulumBullet PPO.png>
-Package pdftex.def Info: img/W&B InvertedPendulumBullet PPO.png  used on input 
-line 178.
+<img/Figure_3_WB_InvertedPendulumBullet_PPO.png, id=56, 2409.0pt x 1606.0pt>
+File: img/Figure_3_WB_InvertedPendulumBullet_PPO.png Graphic file (type png)
+<use img/Figure_3_WB_InvertedPendulumBullet_PPO.png>
+Package pdftex.def Info: img/Figure_3_WB_InvertedPendulumBullet_PPO.png  used o
+n input line 184.
 (pdftex.def)             Requested size: 305.33789pt x 203.54314pt.
-<img/W&B HalfCheetahBullet PPO.png, id=57, 2409.0pt x 1606.0pt>
-File: img/W&B HalfCheetahBullet PPO.png Graphic file (type png)
-<use img/W&B HalfCheetahBullet PPO.png>
-Package pdftex.def Info: img/W&B HalfCheetahBullet PPO.png  used on input line 
-185.
+<img/Figure_4_WB_HalfCheetahBullet_PPO.png, id=57, 2409.0pt x 1606.0pt>
+File: img/Figure_4_WB_HalfCheetahBullet_PPO.png Graphic file (type png)
+<use img/Figure_4_WB_HalfCheetahBullet_PPO.png>
+Package pdftex.def Info: img/Figure_4_WB_HalfCheetahBullet_PPO.png  used on inp
+ut line 191.
 (pdftex.def)             Requested size: 305.33789pt x 203.54314pt.
- [6 <./img/W&B InvertedPendulumBullet PPO.png> <./img/W&B HalfCheetahBullet PPO
-.png>] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 204--206
+ [6 <./img/Figure_3_WB_InvertedPendulumBullet_PPO.png> <./img/Figure_4_WB_HalfC
+heetahBullet_PPO.png>] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 210--212
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 209--213
+Underfull \hbox (badness 10000) in paragraph at lines 215--219
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 214--217
+Underfull \hbox (badness 10000) in paragraph at lines 220--223
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 219--221
+Underfull \hbox (badness 10000) in paragraph at lines 225--227
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 222--224
+Underfull \hbox (badness 10000) in paragraph at lines 228--230
 
  []
 
 [8]
-<img/WB_InvertedPendulumBullet_SAC.png, id=78, 2409.0pt x 1606.0pt>
-File: img/WB_InvertedPendulumBullet_SAC.png Graphic file (type png)
-<use img/WB_InvertedPendulumBullet_SAC.png>
-Package pdftex.def Info: img/WB_InvertedPendulumBullet_SAC.png  used on input l
-ine 230.
+<img/Figure_5_WB_InvertedPendulumBullet_SAC.png, id=78, 2409.0pt x 1606.0pt>
+File: img/Figure_5_WB_InvertedPendulumBullet_SAC.png Graphic file (type png)
+<use img/Figure_5_WB_InvertedPendulumBullet_SAC.png>
+Package pdftex.def Info: img/Figure_5_WB_InvertedPendulumBullet_SAC.png  used o
+n input line 236.
 (pdftex.def)             Requested size: 305.33789pt x 203.54314pt.
-<img/W&B HalfCheetahBullet SAC.png, id=79, 2409.0pt x 1606.0pt>
-File: img/W&B HalfCheetahBullet SAC.png Graphic file (type png)
-<use img/W&B HalfCheetahBullet SAC.png>
-Package pdftex.def Info: img/W&B HalfCheetahBullet SAC.png  used on input line 
-237.
+<img/Figure_6_WB_HalfCheetahBullet_SAC.png, id=79, 2409.0pt x 1606.0pt>
+File: img/Figure_6_WB_HalfCheetahBullet_SAC.png Graphic file (type png)
+<use img/Figure_6_WB_HalfCheetahBullet_SAC.png>
+Package pdftex.def Info: img/Figure_6_WB_HalfCheetahBullet_SAC.png  used on inp
+ut line 243.
 (pdftex.def)             Requested size: 305.33789pt x 203.54314pt.
- [9 <./img/WB_InvertedPendulumBullet_SAC.png> <./img/W&B HalfCheetahBullet SAC.
-png>]
-Underfull \hbox (badness 10000) in paragraph at lines 250--254
+ [9 <./img/Figure_5_WB_InvertedPendulumBullet_SAC.png> <./img/Figure_6_WB_HalfC
+heetahBullet_SAC.png>]
+<img/Figure_7_WB_InvertedPendulumBullet_SAC.png, id=88, 2409.0pt x 1606.0pt>
+File: img/Figure_7_WB_InvertedPendulumBullet_SAC.png Graphic file (type png)
+<use img/Figure_7_WB_InvertedPendulumBullet_SAC.png>
+Package pdftex.def Info: img/Figure_7_WB_InvertedPendulumBullet_SAC.png  used o
+n input line 252.
+(pdftex.def)             Requested size: 305.33789pt x 203.54314pt.
+<img/Figure_8_WB_HalfCheetahBullet_SAC.png, id=89, 2409.0pt x 1606.0pt>
+File: img/Figure_8_WB_HalfCheetahBullet_SAC.png Graphic file (type png)
+<use img/Figure_8_WB_HalfCheetahBullet_SAC.png>
+Package pdftex.def Info: img/Figure_8_WB_HalfCheetahBullet_SAC.png  used on inp
+ut line 259.
+(pdftex.def)             Requested size: 305.33789pt x 203.54314pt.
+ [10 <./img/Figure_7_WB_InvertedPendulumBullet_SAC.png> <./img/Figure_8_WB_Half
+CheetahBullet_SAC.png>]
+<img/Figure_9_WB_InvertedPendulumBullet.png, id=98, 2409.0pt x 1606.0pt>
+File: img/Figure_9_WB_InvertedPendulumBullet.png Graphic file (type png)
+<use img/Figure_9_WB_InvertedPendulumBullet.png>
+Package pdftex.def Info: img/Figure_9_WB_InvertedPendulumBullet.png  used on in
+put line 268.
+(pdftex.def)             Requested size: 305.33789pt x 203.54314pt.
+<img/Figure_10_WB_HalfCheetahBullet.png, id=99, 2409.0pt x 1606.0pt>
+File: img/Figure_10_WB_HalfCheetahBullet.png Graphic file (type png)
+<use img/Figure_10_WB_HalfCheetahBullet.png>
+Package pdftex.def Info: img/Figure_10_WB_HalfCheetahBullet.png  used on input 
+line 275.
+(pdftex.def)             Requested size: 305.33789pt x 203.54314pt.
+ [11 <./img/Figure_9_WB_InvertedPendulumBullet.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 289--293
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 255--258
+Underfull \hbox (badness 10000) in paragraph at lines 294--297
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 261--263
+Underfull \hbox (badness 10000) in paragraph at lines 300--302
 
  []
 
-[10] [11] (./report_project.bbl) [12]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 312.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 312.
+[12] [13] (./report_project.bbl) [14] [15 <./img/Figure_10_WB_HalfCheetahBullet
+.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 351.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 351.
  (./report_project.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 312.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 312.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 351.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 351.
 Package rerunfilecheck Info: File `report_project.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 312.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 351.
  ) 
 Here is how much of TeX's memory you used:
- 23135 strings out of 480906
- 465821 string characters out of 5910771
- 934416 words of memory out of 5000000
- 38267 multiletter control sequences out of 15000+600000
+ 23167 strings out of 480906
+ 467120 string characters out of 5910771
+ 935416 words of memory out of 5000000
+ 38287 multiletter control sequences out of 15000+600000
  544060 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,8n,95p,957b,317s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -959,10 +992,10 @@ pe1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmtt12.pfb>
-Output written on report_project.pdf (12 pages, 1155795 bytes).
+Output written on report_project.pdf (15 pages, 1982535 bytes).
 PDF statistics:
- 155 PDF objects out of 1000 (max. 8388607)
- 117 compressed objects within 2 object streams
- 42 named destinations out of 1000 (max. 500000)
- 43 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 183 PDF objects out of 1000 (max. 8388607)
+ 134 compressed objects within 2 object streams
+ 50 named destinations out of 1000 (max. 500000)
+ 63 words of extra memory for PDF output out of 10000 (max. 10000000)
 

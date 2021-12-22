@@ -23,4 +23,11 @@ T.~Haarnoja, A.~Zhou, P.~Abbeel, and S.~Levine, ``Soft {Actor}-{Critic}:
   {Stochastic} {Actor},'' {\em arXiv:1801.01290 [cs, stat]}, Aug. 2018.
 \newblock arXiv: 1801.01290.
 
+\bibitem{haarnoja_soft_2019}
+T.~Haarnoja, A.~Zhou, K.~Hartikainen, G.~Tucker, S.~Ha, J.~Tan, V.~Kumar,
+  H.~Zhu, A.~Gupta, P.~Abbeel, and S.~Levine, ``Soft {Actor}-{Critic}
+  {Algorithms} and {Applications},'' {\em arXiv:1812.05905 [cs, stat]}, Jan.
+  2019.
+\newblock arXiv: 1812.05905.
+
 \end{thebibliography}
